@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .login-page {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Left side: Image */
+  .login-image {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Right side: Centered login */
+  .login-wrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    opacity: 0; /* Ensures clean transition */
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  
+  .login-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .role-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .role-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d1d5db;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .role-btn.active {
+    background-color: #4f46e5;
+    color: white;
+  }
+  
+  .login-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .login-fields input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #4338ca;
+  }
+  
+  /* Fade-in animation keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* optional for slight upward motion */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply animation to the login-wrapper */
+  .login-wrapper {
+    animation: fadeIn 1s ease forwards;
+  }
+
+    /* Responsive styles */
+  @media screen and (max-width: 992px) {
+    
+    .login-image {
+      width: 100%;
+    }
+    
+    .login-wrapper {
+      width: 100%;
+      padding: 20px;
+    }
+    
+    .login-container {
+      padding: 20px;
+      max-width: 90%;
+    }
+    
+    .role-btn {
+      margin-bottom: 10px;
+    }
+    
+    .login-fields input, .submit-btn {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .login-image {
+      display: none; /* Hide image on smaller screens */
+    } 
+
+    .login-page {
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    }
+
+    .login-wrapper {
+      width: 70%;
+      height: auto;
+      background-image: none;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .login-image {
+        display: none; /* Hide image on smaller screens */
+    } 
+    
+    .login-page {
+        align-items: center;
+        justify-content: center; 
+        background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    }
+
+    .login-wrapper {
+        background-image: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+    }
+  }

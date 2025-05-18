@@ -1,0 +1,407 @@
+/* Enhanced Room Status Page Styles */
+  
+  /* Status Content Container */
+  .status-content {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(230, 230, 230, 0.7);
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out 0.2s forwards;
+  }
+  
+  .status-content > p {
+    color: #1a2942;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.85rem;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: inline-block;
+  }
+  
+  .status-content > p::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
+  }
+  
+  .status-content > p:nth-of-type(2) {
+    margin-top: 30px;
+  }
+  
+  /* Room Selection */
+  label[for="room-select"] {
+    color: #2c3e50;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-right: 12px;
+    display: inline-block;
+  }
+  
+  #room-select {
+    padding: 10px 16px;
+    border: 1px solid #e0e7ff;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #2c3e50;
+    background-color: #f8faff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 160px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+  }
+  
+  #room-select:focus, select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    background-color: #ffffff;
+  }
+  
+  /* Room Info Section */
+  .room-info {
+    background: #f8faff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e0e7ff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .room-info p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+  
+  .profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #room-condition {
+    margin-left: 8px;
+    padding: 6px 12px;
+    border: 1px solid #e0e7ff;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 0.8em;
+  }
+  
+  /* Amenities Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 30px 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e7ff;
+  }
+  
+  th {
+    background-color: #f0f4fc;
+    color: #2c3e50;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 15px 10px;
+    text-align: left;
+    font-size: 1.05rem;
+    border-bottom: 2px solid #e0e7ff;
+  }
+  
+  td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #e0e7ff;
+    color: #2c3e50;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    vertical-align: middle;
+  }
+  
+  tr:hover td {
+    background-color: #f8faff;
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .amenity-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Table Inputs & Selects */
+  table input[type="number"] {
+    width: 70px;
+    padding: 8px;
+    border: 1px solid #e0e7ff;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    background-color: #f8faff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    text-align: center;
+  }
+  
+  table input[type="number"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    background-color: #ffffff;
+  }
+  
+  table select {
+    padding: 8px 25px 8px 10px;
+    border: 1px solid #e0e7ff;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    background-color: #f8faff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 0.8em;
+  }
+  
+  /* Remove number input arrows */
+  input[type="number"]::-webkit-inner-spin-button, 
+  input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+
+  /* Action Buttons */
+  .buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .update-btn, .reset-btn {
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .update-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.2);
+  }
+  
+  .reset-btn {
+    background: #ffffff;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.1);
+  }
+  
+  .update-btn:hover, .reset-btn:hover {
+    transform: translateY(-5px);
+  }
+  
+  .update-btn:hover {
+    box-shadow: 0 7px 15px rgba(52, 152, 219, 0.3);
+  }
+  
+  .reset-btn:hover {
+    box-shadow: 0 7px 15px rgba(231, 76, 60, 0.2);
+    background-color: #fff8f8;
+  }
+  
+  .update-btn:active, .reset-btn:active {
+    transform: translateY(0);
+  }
+  
+  .update-btn::before, .reset-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+    z-index: -1;
+  }
+  
+  .update-btn:hover::before, .reset-btn:hover::before {
+    left: 100%;
+  }
+  
+  /* Responsive design */
+  @media screen and (max-width: 1200px) {
+    
+    .status-content {
+      padding: 25px;
+    }
+    
+    .status-content > p {
+      font-size: 1.7rem;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    table th, table td {
+      padding: 10px 8px;
+    }
+    
+    table th {
+      font-size: 1rem;
+    }
+    
+    table td {
+      font-size: 0.95rem;
+    }
+    
+    .amenity-icon {
+      width: 24px;
+      height: 24px;
+    }
+    
+    table input[type="number"] {
+      width: 60px;
+      padding: 6px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    
+    .status-content {
+        padding: 20px;
+      }
+      
+      .room-info {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .room-info p select{
+        width: 50%;
+      }
+      
+      /* Table responsive adjustments */
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      
+      tr {
+        margin-bottom: 15px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+      }
+      
+      td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+      }
+      
+      td:before {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 600;
+        text-align: left;
+      }
+      
+      /* Add data labels for mobile view */
+      td:nth-of-type(1):before { content: ""; }
+      td:nth-of-type(2):before { content: "Amenity"; }
+      td:nth-of-type(3):before { content: "Amount"; }
+      td:nth-of-type(4):before { content: "Working"; }
+      td:nth-of-type(5):before { content: "Defective"; }
+      td:nth-of-type(6):before { content: "Condition"; }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .status-content > p {
+        font-size: 18px;
+      }
+      
+      .buttons {
+        justify-content: center;
+      }
+      
+      .update-btn {
+        width: 100%;
+      }
+
+      .room-info p select{
+        width: 50%;
+      }
+  }
+  
+
